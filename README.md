@@ -7,6 +7,5 @@ https://michalbluma.com
 
 
 ##Up and running
-``npm install --save-dev`` 
-
-``gulp``
+``npm install --save-dev
+gulp``
