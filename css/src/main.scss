@@ -1,0 +1,29 @@
+/*!
+* CSS for "What is it?"
+* Michal Bluma
+*
+ */
+@import '../../vendors/normalize';
+@import 'mixins';
+@import 'variables';
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body,
+html {
+  margin:  0;
+  padding: 0;
+}
+
+body {
+  background: #000;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+@import 'slides';

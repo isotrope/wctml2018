@@ -1,0 +1,12 @@
+@mixin tp-effect {
+  color:               $colour-brown;
+
+  text-align:          center;
+  text-transform:      uppercase;
+
+  -webkit-text-stroke: 0.3vw $colour-green;
+  paint-order:         stroke fill;
+
+  text-shadow:         2px 2px 2px #090703;
+
+}
