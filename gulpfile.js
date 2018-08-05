@@ -15,7 +15,7 @@ var gulp = require( 'gulp' ),
 	postCss = require( 'gulp-postcss' ),
 	postCssAutoprefixer = require( 'autoprefixer' ),
 	postCssFlexibility = require( 'postcss-flexibility' ),
-	postCssMqPacker = require( 'css-mqpacker' ),
+	// postCssMqPacker = require( 'css-mqpacker' ),
 	postCssNano = require( 'cssnano' ),
 	postCssObjectFillImages = require( 'postcss-object-fit-images' ); // To be used with https://github.com/bfred-it/object-fit-images
 
@@ -43,7 +43,7 @@ var cssFolder = 'css/',
 gulp.task( 'css', function () {
 	var postCssProcessors = [
 		postCssObjectFillImages,
-		postCssMqPacker( { sort : true } ),
+		// postCssMqPacker( { sort : true } ),
 		postCssAutoprefixer( { browsers : [ 'last 2 versions', 'IE > 10' ] } ),
 		postCssNano( { reduceIdents : false, zindex : false } )
 	];
