@@ -1,114 +1,176 @@
-.slides {
-  .slide {
-	width:  100%;
-	height: 100vh;
+.reveal {
+
+  h1,
+  h2,
+  h3,
+  h4 {
 
   }
-}
 
-.slide-tp {
-  //background:                url(../images/paul-gilmore-709205-unsplash.jpg) no-repeat center top / cover;
+  .split-2 {
+	display: flex;
 
-  display:         flex;
-  flex-direction:  column;
-  justify-content: center;
-  align-items:     center;
+	.splitted {
+	  display: block;
+	  width:   50%;
 
-  .bg {
-	position: absolute;
-	top:      0;
-	left:     0;
-	height:   100%;
-	width:    100%;
-
-	overflow: hidden;
-
-	img {
-	  width:    auto;
-	  height:   100%;
-
-	  position: absolute;
-	  top:      0;
-	  left:     0;
-
-	  @media (min-width: $breakpoint-desktop) {
-
-		width:    100%;
-		height:   auto;
-
-		animation-name:            tp-bg-animation;
-		animation-duration:        300s;
-		animation-timing-function: linear;
-		animation-iteration-count: infinite;
-
+	  &.vert-center {
+		display:         flex;
+		flex-direction:  column;
+		justify-content: center;
 	  }
 	}
   }
 
-  .main-title {
+  .cover {
+	.main-title {
+	  font-size:   12vw;
+	  line-height: 1;
 
-	@include tp-effect();
+	  span {
+		display: block;
+	  }
+	}
 
-	font-size:           16vw;
-	font-weight:         600;
+	.michal {
+	  margin-top: 5vw;
+	  font-size:  1.5vw;
+	}
+  }
 
-	letter-spacing:      -0.7vw;
-	word-spacing:        1vw;
-	line-height:         1;
+  .impact {
 
+	h2 {
+	  font-size: 5vw;
+	}
 
+  }
 
+  .raised {
+	text-shadow: 0 1px 1px #bbb,
+				 0 2px 0 #999,
+				 0 3px 0 #888,
+				 0 4px 0 #777,
+				 0 5px 0 #666,
+				 0 6px 0 #555,
+				 0 7px 0 #444,
+				 0 8px 0 #333,
+				 0 9px 7px #302314,
+				 -10px 20px 20px rgba(0, 0, 0, 0.7);
+  }
 
-	position:            relative;
+  .dealing-with {
+	h2 {
+	  font-size: 7vw;
 
-	z-index:             10;
+	  position:  relative;
+
+	  z-index:   10;
+
+	  span {
+		display: block;
+	  }
+	}
+  }
+
+  .word-list {
+	position:  fixed;
+	top:       0;
+	right:     0;
+	bottom:    0;
+	left:      0;
+
+	font-size: 5vw;
+
+	transform: translateY(80vh);
 
 	span {
-	  //display: block;
+	  display: inline-block;
+	  margin:  1vw 3vw;
+	  color:   #ff13b6;
 	}
 
   }
-  .sub {
-	position:                  absolute;
-	text-align:                center;
 
-	left:                      0;
-	bottom:                    3vw;
-	width:                     100%;
-
-	font-size:                 2vw;
-	font-weight:               400;
-	font-style:                italic;
-	color:                     yellow;
-
-	animation-name:            tp-sub;
-	animation-duration:        3s;
-	animation-delay:           5s;
-	animation-timing-function: ease-in-out;
-	animation-fill-mode:       forwards;
-	animation-iteration-count: 1;
-
-	opacity:                   0;
-
-	text-shadow:               2px 2px 2px #090703;
-  }
-
-  @keyframes tp-bg-animation {
-	from {
-	  transform: translateY(0);
-	}
-	to {
-	  transform: translateY(-100%);
+  .present {
+	.word-list {
+	  animation:                 word-list;
+	  animation-duration:        30s;
+	  animation-timing-function: linear;
+	  animation-iteration-count: infinite;
 	}
   }
 
-  @keyframes tp-sub {
-	from {
-	  opacity: 0;
+  .how {
+	font-size: 5vw;
+	h2 {
+	  font-size: 8vw;
 	}
-	to {
-	  opacity: 1;
+
+	.splitted:first-child {
+	  border-right: 4px solid #222;
 	}
   }
 
+  .slide-q-eh {
+	h2 {
+	  font-size: 10vw;
+	  position: relative;
+	  z-index: 10;
+	}
+
+	&.past,
+	&.future {
+	  .fade-me {
+		opacity: 1;
+	  }
+	}
+
+	&.present {
+	  .fade-me {
+		animation:                 fade-out;
+		animation-duration:        3s;
+		animation-delay:           10s;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-fill-mode: forwards;
+	  }
+	}
+
+	.word-list {
+	  animation-delay: 9s;
+	}
+  }
+
+
+
+
+
+  .think {
+	h2 {
+	  font-size: 5vw;
+	}
+  }
+
+}
+
+@keyframes word-list {
+  0% {
+	transform: translateY(80vh)
+  }
+
+  100% {
+	transform: translateY(-100vh)
+  }
+}
+
+@keyframes fade-out {
+  0% {
+	opacity: 1;
+  }
+
+  100% {
+	opacity: 0;
+  }
 }

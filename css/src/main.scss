@@ -7,6 +7,9 @@
 @import 'mixins';
 @import 'variables';
 
+@import 'reveal';
+@import 'reveal-white';
+
 html {
   box-sizing: border-box;
 }
@@ -22,8 +25,7 @@ html {
 }
 
 body {
-  background: #000;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: $font-main;
 }
 
 @import 'slides';

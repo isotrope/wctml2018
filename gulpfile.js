@@ -67,7 +67,7 @@ gulp.task( 'css', function () {
 			} ) )
 		)
 		.pipe( rename( 'main.css' ) )
-		.pipe( sourcemaps.write( '/css/maps' ) )
+		.pipe( sourcemaps.write( './css/maps' ) )
 		.pipe( gulp.dest( './css/' ) )
 		.pipe( notify( { message : '[Front-end] CSS task complete', onLast : true } ) );
 } );
