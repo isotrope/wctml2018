@@ -24,8 +24,12 @@
 
   .cover {
 	.main-title {
-	  font-size:   12vw;
+	  font-size:   70vw;
 	  line-height: 1;
+
+	  @media (min-width: $breakpoint-desktop) {
+		font-size: 12vw;
+	  }
 
 	  span {
 		display: block;
@@ -33,15 +37,25 @@
 	}
 
 	.michal {
-	  margin-top: 5vw;
-	  font-size:  1.5vw;
+	  font-size:  15vw;
+	  margin-top: 65vw;
+
+	  @media (min-width: $breakpoint-desktop) {
+		font-size:  1.5vw;
+		margin-top: 5vw;
+	  }
 	}
   }
 
   .impact {
 
 	h2 {
-	  font-size: 5vw;
+	  font-size: 30vw;
+
+	  @media (min-width: $breakpoint-desktop) {
+		font-size: 5vw;
+
+	  }
 	}
 
   }
@@ -57,15 +71,21 @@
 				 0 8px 0 #333,
 				 0 9px 7px #302314,
 				 -10px 20px 20px rgba(0, 0, 0, 0.7);
+
+	//mix-blend-mode: multiply;
   }
 
   .dealing-with {
 	h2 {
-	  font-size: 7vw;
+	  font-size: 30vw;
 
 	  position:  relative;
 
 	  z-index:   10;
+
+	  @media (min-width: $breakpoint-desktop) {
+		font-size: 7vw;
+	  }
 
 	  span {
 		display: block;
@@ -80,9 +100,13 @@
 	bottom:    0;
 	left:      0;
 
-	font-size: 5vw;
+	font-size: 25vw;
 
 	transform: translateY(80vh);
+
+	@media (min-width: $breakpoint-desktop) {
+	  font-size: 5vw;
+	}
 
 	span {
 	  display: inline-block;
@@ -102,9 +126,20 @@
   }
 
   .how {
-	font-size: 5vw;
+	font-size: 25vw;
 	h2 {
-	  font-size: 8vw;
+	  font-size:     28vw;
+
+	  margin-bottom: 30vw;
+	}
+
+	@media (min-width: $breakpoint-desktop) {
+	  font-size: 5vw;
+
+	  h2 {
+		font-size:     8vw;
+		margin-bottom: 0;
+	  }
 	}
 
 	.splitted:first-child {
@@ -114,9 +149,13 @@
 
   .slide-q-eh {
 	h2 {
-	  font-size: 10vw;
-	  position: relative;
-	  z-index: 10;
+	  font-size: 50vw;
+	  position:  relative;
+	  z-index:   10;
+
+	  @media (min-width: $breakpoint-desktop) {
+		font-size: 10vw;
+	  }
 	}
 
 	&.past,
@@ -133,8 +172,8 @@
 		animation-delay:           10s;
 		animation-timing-function: ease-in-out;
 		animation-iteration-count: 1;
-		animation-direction: normal;
-		animation-fill-mode: forwards;
+		animation-direction:       normal;
+		animation-fill-mode:       forwards;
 	  }
 	}
 
@@ -143,13 +182,13 @@
 	}
   }
 
-
-
-
-
   .think {
 	h2 {
-	  font-size: 5vw;
+	  font-size: 25vw;
+
+	  @media (min-width: $breakpoint-desktop) {
+		font-size: 5vw;
+	  }
 	}
   }
 
