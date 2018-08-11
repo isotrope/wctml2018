@@ -105,7 +105,7 @@
 	transform: translateY(80vh);
 
 	@media (min-width: $breakpoint-desktop) {
-	  font-size: 5vw;
+	  font-size: 3vw;
 	}
 
 	span {
@@ -179,6 +179,40 @@
 
 	.word-list {
 	  animation-delay: 9s;
+	}
+  }
+
+  .book {
+
+	  font-size: 25vw;
+
+	@media (min-width: $breakpoint-desktop) {
+	  font-size: 3vw;
+	}
+
+	h2 {
+	  font-size: 25vw;
+
+	  @media (min-width: $breakpoint-desktop) {
+		font-size: 7vw;
+	  }
+	}
+
+
+	.photo-credit {
+	  position: fixed;
+	  bottom: 10px;
+	  right: 10px;
+
+	  font-size: 10vw;
+
+	  transform: translateX(-40px) rotate(90deg);
+	  transform-origin: bottom right;
+
+	  @media (min-width: $breakpoint-desktop) {
+		font-size: 0.5vw;
+		transform: none;
+	  }
 	}
   }
 

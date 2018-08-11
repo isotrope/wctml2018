@@ -4,10 +4,10 @@ header( "Cache-Control: post-check=0, pre-check=0", false );
 header( "Pragma: no-cache" );
 
 
-$stylesheetTimestamp = date( "YmdHis", filemtime(  'css/main.css') );
-$jsTimestamp = date( "YmdHis", filemtime(  'js/jquery.main.js') );
+$stylesheetTimestamp = date( "YmdHis", filemtime( 'css/main.css' ) );
+$jsTimestamp = date( "YmdHis", filemtime( 'js/jquery.main.js' ) );
 
-
+$presentation_mode = ! empty( $_GET["presentation"] );
 
 
 ?><!doctype html>
@@ -87,7 +87,9 @@ hNNNNNN:                 yNNNNNNNNNNNNy                 :NNNNNNh
 <div class="reveal">
 	<div class="slides">
 
-		<section class="pre-talk" data-background="images/breaking-news.png"></section>
+		<?php if ( $presentation_mode ) { ?>
+			<section class="pre-talk" data-background="images/breaking-news.png"></section>
+		<?php } ?>
 
 		<section class="cover center">
 			<h1 class="main-title"><span class="title-part-1">What</span> <span class="title-part-2">Is It?</span></h1>
@@ -129,12 +131,14 @@ hNNNNNN:                 yNNNNNNNNNNNNy                 :NNNNNNh
 				<span>Gilmore Girls episodes</span>
 				<span>vegan poutine</span>
 				<span>sofas</span>
+				<span>exotic fish</span>
 				<span>drain pipes</span>
 				<span>ebooks</span>
 				<span>greek gods</span>
 				<span>DC superheroes</span>
-				<span>mental exercises</span>
+				<span>math problems</span>
 				<span>yoga poses</span>
+				<span>sports memorabilia</span>
 				<span>barware</span>
 
 			</div>
@@ -155,12 +159,42 @@ hNNNNNN:                 yNNNNNNNNNNNNy                 :NNNNNNh
 
 			<div class="word-list">
 				<span>number of pages?</span>
-				<span>number of tentacles?</span>
 				<span>ISBN?</span>
 				<span>author?</span>
+				<span>difficulty?</span>
 				<span>has been exorcised?</span>
+				<span>hot / cold?</span>
+				<span>level of fluffiness?</span>
+				<span>vegan?</span>
+				<span>available?</span>
+				<span>colour?</span>
+				<span>number of tentacles?</span>
+				<span>child-proof?</span>
+				<span>dimensions?</span>
+				<span>gluten-free?</span>
+				<span>weight?</span>
+				<span>dishwasher-safe?</span>
+				<span>multiplayer?</span>
 				<span>declawed?</span>
+				<span>BTUs?</span>
+				<span>episode number?</span>
+				<span>?</span>
 
+			</div>
+		</section>
+
+		<section class="book" data-background="images/photo-1468779036391-52341f60b55d.jpg">
+			<div class="split-2">
+				<div class="splitted">
+					<p>An example:</p>
+					<h2>a book</h2>
+
+					<div class="photo-credit">Photo by
+						<a href="https://unsplash.com/photos/XN4T2PVUUgk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Beatriz Pérez Moya</a>
+						on
+						<a href="https://unsplash.com/photos/XN4T2PVUUgk">Unsplash</a>
+					</div>
+				</div>
 			</div>
 		</section>
 
